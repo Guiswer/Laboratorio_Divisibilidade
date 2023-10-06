@@ -1,2 +1,7 @@
 # Laboratorio_Divisibilidade
-DIVISIBILIDADE  Projeto encorajado pela atividade de laboratório (UNIP).  Objetivo: Entender aestrutura  de  um  programa,  trabalhandocom organizaçãodo código em funçõese procedimentos.  Desenvolvido por: Guilherme Leandro, Helen Silva, Vitor Oliveira
+
+Projeto encorajado pela atividade de laboratório (UNIP).  
+
+Objetivo: Entender a estrutura  de  um  programa,  trabalhando com organização do código em funções e procedimentos.  
+
+Desenvolvido por: Guilherme Leandro, Helen Silva, Vitor Oliveira.
