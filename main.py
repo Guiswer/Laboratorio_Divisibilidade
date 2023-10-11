@@ -19,35 +19,25 @@ def divisibilidade3(num):
         while len(a) > 1:
             for i in a:
                 b += int(i)
-
             a = str(b)
             b = 0
 
         if a == "3" or a == "6" or a == "9":
-            verificador = True
+            verificador = True          
             
-        else:
-            verificador = False
-            
-
-    else: #para números com 1 algorismos
-        
+    else: #para números com 1 algorismos       
         while num > 0:
             num -= 3
-
         if num == 0:
             verificador = True
-
-        else:
-            verificador = False
-        
+       
     return verificador
-
 
 
 def divisibilidade15(num):
 
     verificador = False
+    verificador3 = False
     a = list(str(num))
     b = 0
 
@@ -60,34 +50,21 @@ def divisibilidade15(num):
             b = 0
 
         if a == "3" or a == "6" or a == "9":
-            verificador3 = True
+            verificador3 = True    
             
-        else:
-            verificador3 = False
-            
-
-    else: #para números com 1 algorismos
-        
+    else: #para números com 1 algorismos     
         while num > 0:
             num -= 3
-
         if num == 0:
             verificador3 = True
-
-        else:
-            verificador3 = False
         
-
     verificador5 = False
     ultimo_digito = int(str(num)[-1])
     if ultimo_digito == 5 or ultimo_digito == 0:
         verificador5 = True
 
-
     if verificador3 and verificador5:
         verificador = True
-    else:
-        verificador = False
 
     return verificador
 
