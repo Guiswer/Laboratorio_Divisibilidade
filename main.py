@@ -10,7 +10,34 @@ def divisibilidade2(num):
 
 
 def testarDivisibilidade(dividendo, divisor):
-    return True
+    verificador = False
+    if divisor == 2:
+        verificador = divisibilidade2(dividendo)
+    elif divisor == 3:
+        verificador = divisibilidade3(dividendo)
+    elif divisor == 4:
+        verificador = divisibilidade4(dividendo)
+    elif divisor == 5:
+        verificador = divisibilidade5(dividendo)
+    elif divisor == 6:
+        verificador = divisibilidade6(dividendo)
+    elif divisor == 7:
+        verificador = divisibilidade7(dividendo)
+    elif divisor == 8:
+        verificador = divisibilidade8(dividendo)
+    elif divisor == 9:
+        verificador = divisibilidade9(dividendo)
+    elif divisor == 10:
+        verificador = divisibilidade10(dividendo)
+    elif divisor == 11:
+        verificador = divisibilidade11(dividendo)
+    elif divisor == 12:
+        verificador = divisibilidade12(dividendo)
+    elif divisor == 15:
+        verificador = divisibilidade15(dividendo)
+    else:
+        verificador =divisibilidade25(dividendo)
+    return verificador
 
 
 def imprimirObjetivoLab():
