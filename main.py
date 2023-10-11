@@ -9,6 +9,89 @@ def divisibilidade2(num):
     return verificador
 
 
+def divisibilidade3(num):
+
+    verificador = False
+    a = list(str(num))
+    b = 0
+
+    if len(a) > 1: #para números com mais de 1 algorismos
+        while len(a) > 1:
+            for i in a:
+                b += int(i)
+
+            a = str(b)
+            b = 0
+
+        if a == "3" or a == "6" or a == "9":
+            verificador = True
+            
+        else:
+            verificador = False
+            
+
+    else: #para números com 1 algorismos
+        
+        while num > 0:
+            num -= 3
+
+        if num == 0:
+            verificador = True
+
+        else:
+            verificador = False
+        
+    return verificador
+
+
+
+def divisibilidade15(num):
+
+    verificador = False
+    a = list(str(num))
+    b = 0
+
+    if len(a) > 1: #para números com mais de 1 algorismos
+        while len(a) > 1:
+            for i in a:
+                b += int(i)
+
+            a = str(b)
+            b = 0
+
+        if a == "3" or a == "6" or a == "9":
+            verificador3 = True
+            
+        else:
+            verificador3 = False
+            
+
+    else: #para números com 1 algorismos
+        
+        while num > 0:
+            num -= 3
+
+        if num == 0:
+            verificador3 = True
+
+        else:
+            verificador3 = False
+        
+
+    verificador5 = False
+    ultimo_digito = int(str(num)[-1])
+    if ultimo_digito == 5 or ultimo_digito == 0:
+        verificador5 = True
+
+
+    if verificador3 and verificador5:
+        verificador = True
+    else:
+        verificador = False
+
+    return verificador
+
+
 def testarDivisibilidade(dividendo, divisor):
     verificador = False
     if divisor == 2:
