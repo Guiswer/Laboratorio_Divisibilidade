@@ -38,7 +38,6 @@ def divisibilidade11(num):
     par_impar = int(str(num[0]))
     contador = 0
 
-
     par = []
     impar = []
 
@@ -47,7 +46,6 @@ def divisibilidade11(num):
 
     while par_impar > 0:
         par_impar -= 2 
-
 
     if par_impar == 0:
         x = 0 
@@ -106,13 +104,11 @@ def divisibilidade11(num):
         si += int(str(impar[y]))
         y += 1 
 
-
     if sp >= si:
         resultado = sp - si
 
         if resultado == 0:
             verificador = True
-
 
         else:
             x = 0
@@ -122,7 +118,6 @@ def divisibilidade11(num):
             
             if resultado == 0:
                 verificador = True
-
 
     elif si >= sp:
         resultado = si - sp
