@@ -33,6 +33,113 @@ def divisibilidade3(num):
        
     return verificador
 
+def divisibilidade11(num):
+    verificador = False
+    par_impar = int(str(num[0]))
+    contador = 0
+
+
+    par = []
+    impar = []
+
+    x = 0 
+    y = 0
+
+    while par_impar > 0:
+        par_impar -= 2 
+
+
+    if par_impar == 0:
+        x = 0 
+        y = 1
+        
+        while contador < len(num):
+            try:
+                par.append(int(str(num[x])))
+            except IndexError:
+                par.append(0)
+                
+            try:
+                impar.append(int(str(num[y])))
+            except IndexError:
+                impar.append(0)
+                
+            contador += 1
+            x += 2 
+            y += 2
+    else:
+        x = 1
+        y = 0
+        z = 0
+        while contador < len(num):
+            try:
+                par.append(int(str(num[x])))
+            except IndexError:
+                par.append(0)
+                
+
+            try:
+                impar.append(int(str(num[y])))
+            except IndexError:
+                impar.append(0)
+                
+            contador += 1 
+            x += 2
+            y += 2
+
+    print(par)
+    print(impar)
+
+    sp = 0
+    x = 0
+
+    #Realizando a soma dos pares
+    for e in par:
+        sp += int(str(par[x]))
+        x += 1
+
+    si = 0
+    y = 0 
+
+    #Realizando a soma dos impares
+    for i in impar:
+        si += int(str(impar[y]))
+        y += 1 
+
+
+    if sp >= si:
+        resultado = sp - si
+
+        if resultado == 0:
+            verificador = True
+
+
+        else:
+            x = 0
+            z = str(resultado)
+            while len(str(resultado)) > 1:
+                resultado = int(z[x]) - int(z[x+1]) 
+            
+            if resultado == 0:
+                verificador = True
+
+
+    elif si >= sp:
+        resultado = si - sp
+
+        if resultado == 0:
+            verificador = True
+
+        else:
+            x = 0
+            z = str(resultado)
+            while len(str(resultado)) > 1:
+                resultado = int(z[x]) - int(z[x+1]) 
+            if resultado == 0:
+                verificador = True
+
+    return verificador
+
 
 def divisibilidade15(num):
 
