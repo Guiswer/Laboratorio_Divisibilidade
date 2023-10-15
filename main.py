@@ -1,5 +1,13 @@
+'''
+/***************************************************/
+/* ALUNO: Guilherm Leandro Da Silva  - RA: G773616 */
+/* ALUNO: Vitor Oliveira dos Santos - RA: N083DG1  */
+/* ALUNA: Helen Aparecida Da Silva  - RA: N070498  */
+/* TURMA: CC2A13 e CC2B13                          */
+/* Profa. Eliane                                   */
+/***************************************************/
+'''
 import math
-
 
 def divisibilidade2(num):
     verificador = False
@@ -8,9 +16,7 @@ def divisibilidade2(num):
         verificador = True
     return verificador
 
-
 def divisibilidade3(num):
-
     verificador = False
     a = list(str(num))
     b = 0
@@ -21,16 +27,76 @@ def divisibilidade3(num):
                 b += int(i)
             a = str(b)
             b = 0
-
         if a == "3" or a == "6" or a == "9":
-            verificador = True          
-            
+            verificador = True                     
     else: #para números com 1 algorismos       
         while num > 0:
             num -= 3
         if num == 0:
             verificador = True
        
+    return verificador
+
+def divisibilidade4(num):
+    verificador = False
+    if divisibilidade2(num) == True and divisibilidade2(num/2) == True:
+        verificador = True
+    return verificador
+
+def divisibilidade5(num):
+    verificador = False
+    ultimo_digito = int(str(num)[-1])
+    if ultimo_digito == 5 or ultimo_digito == 0:
+        verificador = True
+    return verificador
+
+def divisibilidade6(num):
+    verificador = False
+    if divisibilidade2(num) == True and divisibilidade3(num):
+        verificador = True
+    return verificador
+
+def divisibilidade7(num):
+    verificador = False
+
+    ultimo_digito = int(str(num)[-1])
+
+    multiplicacao = ultimo_digito * 2
+    remove_ultimo_digito = int(str(num)[:-1])
+
+    valor_para_alteracao = remove_ultimo_digito - multiplicacao
+
+    while valor_para_alteracao > 70:
+        ultimo_digito = int(str(valor_para_alteracao)[-1])
+
+        multiplicacao = ultimo_digito * 2
+        remove_ultimo_digito = int(str(valor_para_alteracao)[:-1])
+
+        valor_para_alteracao = remove_ultimo_digito - multiplicacao
+
+    for i in [0, 7, 14, 21, 28, 35, 42, 49, 54, 63, 70]:
+        if i == valor_para_alteracao:
+            verificador = True
+
+    return verificador
+
+def divisibilidade8(num):
+    verificador = False
+    if divisibilidade2(num) == True and divisibilidade2(num/2) == True and divisibilidade2((num/2)/2):
+        verificador = True
+    return verificador
+
+def divisibilidade9(num):
+    verificador = False
+    if divisibilidade3(num) == True and divisibilidade3(num/3) == True:
+        verificador = True
+    return verificador 
+
+def divisibilidade10(num):
+    verificador = False
+    ultimo_digito = int(str(num)[-1])
+    if ultimo_digito == 0:
+        verificador = True
     return verificador
 
 def divisibilidade11(num):
@@ -41,29 +107,29 @@ def divisibilidade11(num):
     par = []
     impar = []
 
-    x = 0 
+    x = 0
     y = 0
 
     while par_impar > 0:
-        par_impar -= 2 
+        par_impar -= 2
 
     if par_impar == 0:
-        x = 0 
+        x = 0
         y = 1
-        
+
         while contador < len(num):
             try:
                 par.append(int(str(num[x])))
             except IndexError:
                 par.append(0)
-                
+
             try:
                 impar.append(int(str(num[y])))
             except IndexError:
                 impar.append(0)
-                
+
             contador += 1
-            x += 2 
+            x += 2
             y += 2
     else:
         x = 1
@@ -74,14 +140,13 @@ def divisibilidade11(num):
                 par.append(int(str(num[x])))
             except IndexError:
                 par.append(0)
-                
 
             try:
                 impar.append(int(str(num[y])))
             except IndexError:
                 impar.append(0)
-                
-            contador += 1 
+
+            contador += 1
             x += 2
             y += 2
 
@@ -91,18 +156,18 @@ def divisibilidade11(num):
     sp = 0
     x = 0
 
-    #Realizando a soma dos pares
+    # Realizando a soma dos pares
     for e in par:
         sp += int(str(par[x]))
         x += 1
 
     si = 0
-    y = 0 
+    y = 0
 
-    #Realizando a soma dos impares
+    # Realizando a soma dos impares
     for i in impar:
         si += int(str(impar[y]))
-        y += 1 
+        y += 1
 
     if sp >= si:
         resultado = sp - si
@@ -114,8 +179,8 @@ def divisibilidade11(num):
             x = 0
             z = str(resultado)
             while len(str(resultado)) > 1:
-                resultado = int(z[x]) - int(z[x+1]) 
-            
+                resultado = int(z[x]) - int(z[x + 1])
+
             if resultado == 0:
                 verificador = True
 
@@ -129,15 +194,19 @@ def divisibilidade11(num):
             x = 0
             z = str(resultado)
             while len(str(resultado)) > 1:
-                resultado = int(z[x]) - int(z[x+1]) 
+                resultado = int(z[x]) - int(z[x + 1])
             if resultado == 0:
                 verificador = True
 
     return verificador
 
+def divisibilidade12(num):
+    verificador = False
+    if divisibilidade3(num) and divisibilidade4(num):
+        verificador = True
+    return verificador
 
 def divisibilidade15(num):
-
     verificador = False
     verificador3 = False
     a = list(str(num))
@@ -170,6 +239,11 @@ def divisibilidade15(num):
 
     return verificador
 
+def divisibilidade25(num):
+    verificador = False
+    if divisibilidade5(num) == True and divisibilidade5(num/5) == True:
+        verificador = True
+    return verificador
 
 def testarDivisibilidade(dividendo, divisor):
     verificador = False
@@ -203,13 +277,13 @@ def testarDivisibilidade(dividendo, divisor):
 
 
 def imprimirObjetivoLab():
-    print("Programa TESTE DE DIVISIBILIDADE\n"
-    + "O  programa  tem  por  objetivo  informar  se  um  determinadonumero ehou nao divisivel por outro.\n"
+    print("\nPrograma TESTE DE DIVISIBILIDADE\n"
+    + "O  programa  tem  por  objetivo  informar  se  um  determinadonumero eh ou nao divisivel por outro.\n"
     + "Os testes de divisibilidade sao validos para os seguintes divisores: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15 e 25.\n\n")
     dividendo = int(input("Dividendo: "))
     divisor = int(input("Divisor: "))
     
-    while divisor not in [2, 3, 4, 5, 6 , 7, 8, 10, 11, 12, 15, 25]:
+    while divisor not in [2, 3, 4, 5, 6 , 7, 8, 9, 10, 11, 12, 15, 25]:
         print("Divisor invalido! Favor informar novos valores.")
         dividendo = int(input("Dividendo: "))
         divisor = int(input("Divisor: "))
