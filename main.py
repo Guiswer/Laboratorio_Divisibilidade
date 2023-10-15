@@ -101,7 +101,8 @@ def divisibilidade10(num):
 
 def divisibilidade11(num):
     verificador = False
-    par_impar = int(str(num[0]))
+    num_str = str(num)  # Converte o número para uma string
+    par_impar = int(num_str[0])  # Pega o primeiro dígito da string
     contador = 0
 
     par = []
@@ -117,14 +118,14 @@ def divisibilidade11(num):
         x = 0
         y = 1
 
-        while contador < len(num):
+        while contador < len(num_str):
             try:
-                par.append(int(str(num[x])))
+                par.append(int(num_str[x]))
             except IndexError:
                 par.append(0)
 
             try:
-                impar.append(int(str(num[y])))
+                impar.append(int(num_str[y]))
             except IndexError:
                 impar.append(0)
 
@@ -135,23 +136,20 @@ def divisibilidade11(num):
         x = 1
         y = 0
         z = 0
-        while contador < len(num):
+        while contador < len(num_str):
             try:
-                par.append(int(str(num[x])))
+                par.append(int(num_str[x]))
             except IndexError:
                 par.append(0)
 
             try:
-                impar.append(int(str(num[y])))
+                impar.append(int(num_str[y]))
             except IndexError:
                 impar.append(0)
 
             contador += 1
             x += 2
             y += 2
-
-    print(par)
-    print(impar)
 
     sp = 0
     x = 0
@@ -164,7 +162,7 @@ def divisibilidade11(num):
     si = 0
     y = 0
 
-    # Realizando a soma dos impares
+    # Realizando a soma dos ímpares
     for i in impar:
         si += int(str(impar[y]))
         y += 1
@@ -195,6 +193,7 @@ def divisibilidade11(num):
             z = str(resultado)
             while len(str(resultado)) > 1:
                 resultado = int(z[x]) - int(z[x + 1])
+
             if resultado == 0:
                 verificador = True
 
