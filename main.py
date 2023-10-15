@@ -1,6 +1,6 @@
 '''
 /***************************************************/
-/* ALUNO: Guilherm Leandro Da Silva  - RA: G773616 */
+/* ALUNO: Guilherme Leandro da Silva - RA: G773616 */
 /* ALUNO: Vitor Oliveira dos Santos - RA: N083DG1  */
 /* ALUNA: Helen Aparecida Da Silva  - RA: N070498  */
 /* TURMA: CC2A13 e CC2B13                          */
