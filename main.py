@@ -7,7 +7,6 @@
 /* Profa. Eliane                                   */
 /***************************************************/
 '''
-import math
 
 def divisibilidade2(num):
     verificador = False
