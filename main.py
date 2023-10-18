@@ -17,6 +17,10 @@ def divisibilidade2(num):
 
 def divisibilidade3(num):
     verificador = False
+
+    if num < 0:
+        num *= -1
+
     a = list(str(num))
     b = 0
 
@@ -100,6 +104,10 @@ def divisibilidade10(num):
 
 def divisibilidade11(num):
     verificador = False
+
+    if num < 0:
+        num *= -1
+
     num_str = str(num)  # Converte o número para uma string
     par_impar = int(num_str[0])  # Pega o primeiro dígito da string
     contador = 0
@@ -207,6 +215,10 @@ def divisibilidade12(num):
 def divisibilidade15(num):
     verificador = False
     verificador3 = False
+
+    if num < 0:
+        num *= -1
+    
     a = list(str(num))
     b = 0
 
